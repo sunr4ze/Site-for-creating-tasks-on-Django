@@ -6,3 +6,6 @@ def index(request):
 
 def info(request):
     return HttpResponse("<h1>О нас</h1>")
+
+def contacts(request):
+    return HttpResponse("<h1>Контакты</h1>")
