@@ -8,4 +8,4 @@ def about(request):
     return render(request, 'site_app/about.html')
 
 def contacts(request):
-    return HttpResponse("<h1>Контакты</h1>")
+    return render(request, 'site_app/contacts.html')
