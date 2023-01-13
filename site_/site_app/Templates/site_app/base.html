@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load static%}
+{% load static %}
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -10,9 +10,9 @@
     <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
         <span class="fs-4">IT Overone</span>
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/">Главная</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/about">Про нас</a>
-          <a class="me-3 py-2 text-dark text-decoration-none" href="/contacts">Контакты</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'home' %}">Главная</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'about' %}">О нас</a>
+          <a class="me-3 py-2 text-dark text-decoration-none" href="contacts/">Контакты</a>
       </nav>
     </div>
 
