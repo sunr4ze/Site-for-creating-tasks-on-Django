@@ -1,9 +1,26 @@
-{% extends 'site_app/base.html'%}
+{% extends 'site_app/base.html' %}
 
 {% block title %}
-Главная страница
+{{ title }}
 {% endblock %}
 
 {% block content %}
+<style>
+    h1 {
+        margin-bottom: 40px;
+    }
+</style>
 <h1>Главная страница</h1>
+    {% for el in tasks%}
+    <div class="alert alert-warning mt-2">
+        <div class="text-success">
+            <h4>{{el.title}}</h4>
+        </div>
+        <p>Описание: {{el.task}}</p>
+        <p>Тип задачи: {{el.type}}</p>
+        <p>Приоритет: {{el.priority}}</p>
+        <p>Сроки выполнения: {{el.deadline}}</p>
+        <p>Статус: {{el.status}}</p>
+    </div>
+    {% endfor %}
 {% endblock %}
