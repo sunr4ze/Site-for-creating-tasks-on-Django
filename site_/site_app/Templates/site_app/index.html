@@ -11,16 +11,19 @@
     }
 </style>
 <h1>Главная страница</h1>
-    {% for el in tasks%}
-    <div class="alert alert-warning mt-2">
-        <div class="text-success">
-            <h4>{{el.title}}</h4>
+    {% if tasks %}
+        {% for el in tasks%}
+        <div class="alert alert-warning mt-2">
+            <div class="text-success">
+                <h4>{{el.title}}</h4>
+            </div>
+            <p>Описание: {{el.task}}</p>
+            <p>Тип задачи: {{el.type}}</p>
+            <p>Приоритет: {{el.priority}}</p>
+            <p>Сроки выполнения: {{el.deadline}}</p>
+            <p>Статус: {{el.status}}</p>
         </div>
-        <p>Описание: {{el.task}}</p>
-        <p>Тип задачи: {{el.type}}</p>
-        <p>Приоритет: {{el.priority}}</p>
-        <p>Сроки выполнения: {{el.deadline}}</p>
-        <p>Статус: {{el.status}}</p>
-    </div>
-    {% endfor %}
+        {% endfor %}
+    {% else %}
+        <p>Список задач пуст</p>
 {% endblock %}

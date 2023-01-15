@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Task
 
 def index(request):
-    tasks = Task.objects.all()
+    tasks = Task.objects.order_by('priority')
     return render(request, 'site_app/index.html', {'title': 'Главная страница', 'tasks': tasks})
 
 def about(request):
