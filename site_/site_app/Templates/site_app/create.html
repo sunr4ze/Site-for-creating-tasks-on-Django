@@ -1,0 +1,20 @@
+{% extends 'site_app/base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <style>
+        h1 {
+            margin-bottom: 40px;
+        }
+    </style>
+    <h1>Создать новую задачу</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Введите название" class="form-control"><br>
+        <textarea type="text" placeholder="Введите описание" class="form-control"></textarea><br>
+        <button type="submit" class="btn btn-success">Добавить</button>
+    </form>
+{% endblock %}
