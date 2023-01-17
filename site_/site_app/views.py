@@ -11,7 +11,7 @@ def create(request):
     context = {
         'form': form
     }
-    return render(request, 'site_app/create.html', {'title': 'Создать новую задачу'})
+    return render(request, 'site_app/create.html', context)
 
 def contacts(request):
     return render(request, 'site_app/contacts.html')

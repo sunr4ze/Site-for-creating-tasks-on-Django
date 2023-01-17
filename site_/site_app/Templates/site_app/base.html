@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    {% block tmp %}{% endblock %}
 </head>
 <body>
     <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
@@ -21,3 +21,6 @@
     </div>
 </body>
 </html>
+
+{% block styles %}{% endblock %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">

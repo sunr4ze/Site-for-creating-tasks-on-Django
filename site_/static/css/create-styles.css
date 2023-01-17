@@ -1,0 +1,12 @@
+{% load static %}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.button1 {
+    display: flex;
+    justify-content: center;
+}
