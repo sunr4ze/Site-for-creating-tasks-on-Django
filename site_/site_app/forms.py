@@ -5,7 +5,7 @@ from django.forms import ModelForm, Textarea, TextInput
 class TaskForm(ModelForm):
     class Meta:
         model = Task
-        fields = ["type", "title", "task", "priority", "deadline", "status"]
+        fields = ["type", "title", "task", "deadline"]
         widgets = {"type": Textarea(attrs=
                                      {'class': 'form-control',
                                       'placeholder': 'Тип'}),
@@ -15,12 +15,6 @@ class TaskForm(ModelForm):
                    "task": Textarea(attrs=
                                      {'class': 'form-control',
                                       'placeholder': 'Описание'}),
-                   "priority": Textarea(attrs=
-                                         {'class': 'form-control',
-                                          'placeholder': 'Приоритет'}),
                    "deadline": Textarea(attrs=
                                          {'class': 'form-control',
-                                          'placeholder': 'Сроки выполнения'}),
-                   "status": Textarea(attrs=
-                                       {'class': 'form-control',
-                                        'placeholder': 'Статус'})}
+                                          'placeholder': 'Сроки выполнения'})}

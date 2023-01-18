@@ -7,6 +7,11 @@ def index(request):
     return render(request, 'site_app/index.html', {'title': 'Главная страница', 'tasks': tasks})
 
 def create(request):
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+
     form = TaskForm()
     context = {
         'form': form
