@@ -1,9 +1,0 @@
-{% load static %}
-
-h1 {
-    margin-bottom: 40px;
-}
-
-.text-success {
-    padding: 15px;
-}
